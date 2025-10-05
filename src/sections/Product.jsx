@@ -4,7 +4,7 @@ import { products } from "../constants";
 
 const Product = () => {
   return (
-    <section className="">
+    <section>
       <h1 className="font-palanquin text-5xl font-bold leading-tight">
         Our <span className="text-red-500">Popular</span> Products
       </h1>

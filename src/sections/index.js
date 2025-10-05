@@ -1,3 +1,4 @@
+import Customers from "./Customers";
 import Footer from "./Footer";
 import Hero from "./Hero";
 import Mail from "./Mail";
@@ -7,6 +8,7 @@ import Product from "./Product";
 import Rating from "./Rating";
 
 export {
+    Customers,
     Footer, 
     Hero, 
     Mail, 

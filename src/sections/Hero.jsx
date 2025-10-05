@@ -13,7 +13,7 @@ const Hero = () => {
         <p className="font-montserrat text-red-500 text-lg">
           Our Summer collections
         </p>
-        <h1 className="font-bold text-[72px] mt-10 mb-10 font-palanquin leading-tight">
+      <h1 className="font-bold text-[72px] mt-10 mb-10 font-palanquin leading-tight">
           The New Arrival <span className="text-red-500">Nike</span> Shoes
         </h1>
         <p className="font-montserrat text-lg text-slate-600 mb-10">
