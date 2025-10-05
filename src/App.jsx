@@ -1,6 +1,6 @@
 import { useState } from 'react'
 import './App.css'
-import { NavBar, Hero, Product, Rating, Mail, Footer } from './sections';
+import { NavBar, Hero, Product, Rating, Offer, Mail, Footer } from './sections';
 
 
 function App() {
@@ -12,11 +12,14 @@ function App() {
       <section>
         <Hero />
       </section>
-      <section className='p-20 border border-black'>
+      <section className='px-8'>
         <Product />
       </section>
-      <section className='p-20 border border-black'>
+      <section className='p-8'>
         <Rating />
+      </section>
+      <section className='p-20'>
+        <Offer />
       </section>
       <section className='p-20 border border-black'>
         <Mail />
