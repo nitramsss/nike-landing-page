@@ -5,15 +5,19 @@ import {
   collectionBackground,
 } from "../../assets/images";
 import { statistics, shoes } from "../constants";
+import { useState } from "react";
 
 const Hero = () => {
+  const [heroShoe, setHeroShoe] = useState(bigShoe1);
+  const [selectedShoeIndex, setSelectedShoeIndex] = useState(0);
+
   return (
     <div>
       <section className="p-10">
         <p className="font-montserrat text-red-500 text-lg">
           Our Summer collections
         </p>
-      <h1 className="font-bold text-[72px] mt-10 mb-10 font-palanquin leading-tight">
+        <h1 className="font-bold text-[72px] mt-10 mb-10 font-palanquin leading-tight">
           The New Arrival <span className="text-red-500">Nike</span> Shoes
         </h1>
         <p className="font-montserrat text-lg text-slate-600 mb-10">
@@ -38,13 +42,21 @@ const Hero = () => {
             src={collectionBackground}
             className="object-cover h-full w-full"
           />
-          <img src={bigShoe1} className="absolute" />
+          <img src={heroShoe} className="absolute w-170" />
         </div>
         <div className="flex flex-wrap absolute bottom-5 w-full px-5 justify-around gap-3 sm:gap-8 md:pl-20 md:justify-start">
           {shoes.map((shoe, index) => (
             <div
-              className="max-w-40 relative items-center justify-center flex overflow-hidden rounded-xl max-sm:w-20"
               key={index}
+              className={`max-w-40 relative items-center justify-center flex overflow-hidden rounded-xl max-sm:w-20 cursor-pointer transition-all duration-200 ${
+            selectedShoeIndex === index
+              ? "border-3 border-red-300" // Selected = highlighted border
+              : "border border-transparent" // Not selected = no border
+          }`}
+              onClick={() => {
+                setHeroShoe(shoe.thumbnail);
+                setSelectedShoeIndex(index);
+              }}
             >
               <img src={thumbnailBackground} className="object-cover" />
               <img

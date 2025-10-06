@@ -26,7 +26,7 @@ function App() {
       <section className="px-8 py-20">
         <Mail />
       </section>
-      <section className="p-8 bg-black">
+      <section className="px-8 py-10 bg-black">
         <Footer />
       </section>
     </>
